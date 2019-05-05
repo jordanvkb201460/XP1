@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XP.Views.ExperienceDetails">
+    <ContentPage.Content>
+        <StackLayout Spacing="20"
+                     HorizontalOptions="CenterAndExpand"
+                     VerticalOptions="Center"
+                     BackgroundColor="Gray"
+                     >
+            <StackLayout Orientation="Horizontal" >
+                <Label  Text="Nom de l'expérience : " TextColor="Black" FontSize="18" />
+                <Label  x:Name="nom" TextColor="Black" FontSize="16" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label  Text="Compensation" TextColor="Black" FontSize="18" />
+                <Label  x:Name="compensation" TextColor="Black" FontSize="16"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Label  Text="Lieu" TextColor="Black" FontSize="18" WidthRequest="110"/>
+                <Label  x:Name="lieu" TextColor="Black" FontSize="16"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Label  Text="Age requirement" TextColor="Black" FontSize="18"/>
+                <Label  x:Name="agereq" TextColor="Black" FontSize="16"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Label  Text="Sex requirement" TextColor="Black" FontSize="18"/>
+                <Label  x:Name="SexReq" TextColor="Black" FontSize="16"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Label  Text="Specifiq requirement" TextColor="Black" FontSize="18" />
+                <Label  x:Name="SpeReq" TextColor="Black" FontSize="16"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Label  Text="Date" TextColor="Black" FontSize="18"/>
+                <Label  x:Name="date" TextColor="Black" FontSize="16"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button
+                    x:Name="participationRq"
+                    Clicked="ParticipationRequest"
+                    Text="S'inscrire">
+                        
+                </Button>
+                <Button x:Name="uselessBouton">
+                    
+                </Button>
+            </StackLayout>
+
+            <StackLayout Margin="5"
+                         BackgroundColor="GhostWhite">
+                <Label
+                    Text="FeedBack">
+                    
+                </Label>
+                <Label
+                    x:Name="feedback">
+                    
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

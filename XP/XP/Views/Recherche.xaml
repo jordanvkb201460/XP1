@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XP.Views.Recherche">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Name">
+            </Label>
+            <Entry
+                x:Name="Name">
+            </Entry>
+            <Label Text="Compensation">
+            </Label>
+            <Entry
+                x:Name="Compensation">
+            </Entry>
+            <Label Text="Date Debut">
+            </Label>
+            <Entry
+                x:Name="Date">
+            </Entry>
+            <Button Clicked="RechercheButton" Text="Recherche">
+              
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
