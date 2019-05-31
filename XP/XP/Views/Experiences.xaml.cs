@@ -12,7 +12,7 @@ namespace XP.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Experiences : ContentPage
 	{
-		public Experiences (Dictionary<string,string> dic=null)
+		public Experiences (Dictionary<string,FilterHelper> dic=null)
 		{
 			InitializeComponent ();
             List<Experience> list = new List<Experience>(RestService.Request<List<Experience>>());
@@ -22,12 +22,8 @@ namespace XP.Views
             }
             foreach (Experience exp in list)
             {
-                if(!exp.IsActive)
-                {
-
-                }
-                else
-                {
+                if(exp.IsActive)
+                { 
                     Label lbl = new Label()
                     {
                         HorizontalOptions = LayoutOptions.Start,
@@ -57,14 +53,20 @@ namespace XP.Views
             }
         }
 
-        private List<Experience> Sort(List<Experience> list, Dictionary<string, string> dic)
+        private List<Experience> Sort(List<Experience> list, Dictionary<string, FilterHelper> dic)
         {
             IEnumerable<Experience> tmpList = list;
-            foreach (KeyValuePair<string,string> kvp in dic)
+            foreach (KeyValuePair<string,FilterHelper> kvp in dic)
             {
-                
-              tmpList = list.Where(x => x.GetType().GetProperty(kvp.Key).GetValue(x).ToString() == kvp.Value);
-
+               if(kvp.Value.Method.Equals("GreaterOrEquals"))
+               {
+                   int a = Int32.Parse(kvp.Value.Value);
+                   tmpList = list.Where(x =>  Convert.ToInt32(x.GetType().GetProperty(kvp.Key).GetValue(x)) >=  a);
+               }
+               else if (kvp.Value.Method.Equals("Contains"))
+               {
+                   tmpList = list.Where(x => x.GetType().GetProperty(kvp.Key).GetValue(x).ToString().Contains(kvp.Value.Value));
+               }
             }
             return tmpList.ToList<Experience>();
         }
@@ -79,6 +81,13 @@ namespace XP.Views
         public void Recherche(object sender, EventArgs e)
         {
             this.Navigation.PushAsync(new Recherche());
+        }
+
+        public void Logout(object sender, EventArgs e)
+        {
+            RestService.PostRequest<string>(new Token(User.getInstance().Token), "logoutjson");
+            User.EraseInstance();
+            this.Navigation.PopToRootAsync();
         }
     }
 }

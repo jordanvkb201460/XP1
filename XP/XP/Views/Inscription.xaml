@@ -65,6 +65,15 @@
                     Placeholder="Sex">
 
                 </Entry>
+
+                <Label
+                    Text="BirthDate">
+                    
+                </Label>
+                <DatePicker 
+                    x:Name="test">
+                    
+                </DatePicker>
             </StackLayout>
             <Button Text="Inscription"
                     Clicked="InscriptionCheckAsync">

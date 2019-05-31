@@ -21,6 +21,12 @@
                 Text="Recherche">
                 
             </Button>
+
+            <Button
+                Clicked="Logout"
+                Text="Deconnexion">
+
+            </Button>
         </StackLayout>
         
     </ContentPage.Content>

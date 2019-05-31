@@ -10,13 +10,15 @@ namespace XP
 
         public int Validated { get; set; }
 
-        public int IdParticipant { get; set; }
+        public string IdParticipant { get; set; }
 
         public Experience IdExperience { get; set; }
 
+        public int Status { get; set; }
+
         public ParticipationRequest()
         {
-            this.IdExperience = new Experience();
+            
         }
     }
 }

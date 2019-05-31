@@ -25,5 +25,9 @@ namespace XP
         public Message[] Messages { get; set; }
 
         public List<ParticipationRequest> participationRequests { get; set; }
+
+        public string Token { get; set; }
+
+        public DateTime BirthDate { get; set; }
     }
 }

@@ -19,15 +19,27 @@ namespace XP.Views
 
         public void RechercheButton(object senders, EventArgs e)
         {
-            Dictionary<string, string> dic = new Dictionary<string, string>();
+            Dictionary<string, FilterHelper> dic = new Dictionary<string, FilterHelper>();
             if(Compensation.Text != null)
             {
-                dic.Add("Compensation", Compensation.Text);
+                dic.Add("Compensation",new FilterHelper(){
+                  Value = Compensation.Text,
+                  Method = "GreaterOrEquals"
+                });
             }
             if (Name.Text != null)
             {
-                dic.Add("Name", Name.Text);
+                dic.Add("Name", new FilterHelper()
+                {
+                    Value = Name.Text,
+                    Method = "Contains"
+                });
+
             }
+           /* if (Date.Date != null)
+            {
+                dic.Add("DateDebut", Date.Date.ToShortDateString());
+            }*/
 
             this.Navigation.PushAsync(new Experiences(dic));
         }

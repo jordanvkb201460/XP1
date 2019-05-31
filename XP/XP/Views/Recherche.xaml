@@ -14,11 +14,12 @@
             <Entry
                 x:Name="Compensation">
             </Entry>
-            <Label Text="Date Debut">
-            </Label>
-            <Entry
+            
+            <!--Label Text="Date Debut">
+            </>
+            <DatePicker
                 x:Name="Date">
-            </Entry>
+            </-->
             <Button Clicked="RechercheButton" Text="Recherche">
               
             </Button>

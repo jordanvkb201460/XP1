@@ -27,15 +27,19 @@ namespace XP.Views
             date.Text = exp.DateDebut.ToString();
             idExp = exp.id;
             bool check = false;
-            foreach(ParticipationRequest tmp in User.ParticipationRequest)
+            var tmp2 = User.getInstance();
+            foreach(ParticipationRequest tmp in User.getInstance().ParticipationRequests)
             {
                 if(tmp.IdExperience.id == this.idExp)
                 {
                     switch (tmp.Validated)
                     {
                         case 1: uselessBouton.Text = "Inscription validée";
-                            //rajouter une condition
-                            feedback.Text = exp.Feedback; break;
+                            if(!exp.IsActive)
+                            {
+                                feedback.Text = exp.Feedback; 
+                            }
+                            break;
                         case 2: uselessBouton.Text = "Inscription refusée"; break;
                         case 3: uselessBouton.Text = "Inscription en attente"; break;
                     }
@@ -58,14 +62,17 @@ namespace XP.Views
         {
             ParticipationRequest pr = new ParticipationRequest
             {
-                IdParticipant = User.Id,
+                Status = 0, 
+                IdParticipant = User.getInstance().Token,
                 Validated = 3,
             };
-            pr.IdExperience.id = this.idExp;
+            Experience tmp = new Experience();
+            tmp.id = this.idExp;
+            pr.IdExperience = tmp;
             RestService.PostRequest<string>(pr, "participationRequest");
             uselessBouton.Text = "demande d'inscription envoyée";
             participationRq.IsEnabled = false;
-            User.ParticipationRequest.Add(pr);
+            User.getInstance().ParticipationRequests.Add(pr);
         }
     }
 }

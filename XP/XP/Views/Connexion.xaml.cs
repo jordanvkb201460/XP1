@@ -37,15 +37,7 @@ namespace XP.Views
             }
             else
             {
-                User.Age = json.Age;
-                User.Experiences = json.Experiences;
-                User.Firstname = json.Firstname;
-                User.Id = json.Id;
-                User.Lastname = json.Lastname;
-                User.Mail = json.Mail;
-                User.Messages = json.Messages;
-                User.ParticipationRequest = json.participationRequests;
-                User.Sex = json.Sex;
+                User.getInstance(json);
                 this.Navigation.PushAsync(new Experiences());
             }
             //var test = RestService.Save(json, "onsenfout");
