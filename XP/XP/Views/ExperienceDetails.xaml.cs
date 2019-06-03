@@ -25,6 +25,7 @@ namespace XP.Views
             SexReq.Text = exp.SexReq?.ToString();
             SpeReq.Text = exp.SpecifiqReq?.ToString();
             date.Text = exp.DateDebut.ToString();
+            dateFin.Text = exp.DateFin.ToString();
             idExp = exp.id;
             bool check = false;
             var tmp2 = User.getInstance();
@@ -32,16 +33,18 @@ namespace XP.Views
             {
                 if(tmp.IdExperience.id == this.idExp)
                 {
-                    switch (tmp.Validated)
+                    switch (tmp.Status)
                     {
                         case 1: uselessBouton.Text = "Inscription validée";
-                            if(!exp.IsActive)
-                            {
-                                feedback.Text = exp.Feedback; 
-                            }
+                            feedback.Text = exp.Feedback; 
                             break;
-                        case 2: uselessBouton.Text = "Inscription refusée"; break;
-                        case 3: uselessBouton.Text = "Inscription en attente"; break;
+                        case 2: uselessBouton.Text = "Inscription refusée";
+                            feedback.Text = "Attention, vous ne remplissez pas les critères requis pour cette expérience";
+                            break;
+                        case 0: uselessBouton.Text = "Inscription en attente"; break;
+                        default: uselessBouton.Text = "Experience terminée";
+                            feedback.Text = exp.Feedback;
+                            break;
                     }
                     check = true;
                     break;

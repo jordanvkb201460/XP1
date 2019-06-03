@@ -12,7 +12,8 @@
             <Label Text="Compensation">
             </Label>
             <Entry
-                x:Name="Compensation">
+                x:Name="Compensation"
+                Keyboard="Numeric">
             </Entry>
             
             <!--Label Text="Date Debut">

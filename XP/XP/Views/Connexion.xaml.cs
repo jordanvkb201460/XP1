@@ -30,7 +30,7 @@ namespace XP.Views
                 username = pseudoUser.Text,
                 password = pswdUser.Text,
             };
-            var json = RestService.PostRequest<Participant>(connexion, "onsenfout");
+            var json = RestService.PostRequest<Participant>(connexion, "loginjson");
             if(json == null)
             {
                 lblError.Text = "Mauvais mdp";

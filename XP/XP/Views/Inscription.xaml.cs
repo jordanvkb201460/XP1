@@ -22,19 +22,17 @@ namespace XP.Views
         public void InscriptionCheckAsync(object sender, EventArgs e)
         {
             //this.Navigation.PushAsync(new Experiences());
-            int tmpAge;
-            Int32.TryParse(age.Text, out tmpAge);
             Participant pa = new Participant
             {
                 Firstname = firstname.Text,
                 Lastname = lastname.Text,
-                Age = tmpAge,
                 Mail = mail.Text,
                 Password = password.Text,
                 Sex = sex.Text,
+                BirthDate = birthdate.Date,
             };
-            string paJson = JsonConvert.SerializeObject(pa);
-            RestService.PostRequest<string>(paJson,"inscriptionParticipant");
+            RestService.PostRequest<string>(pa,"inscriptionParticipant");
+            this.Navigation.PopAsync();
         }
 	}
 }

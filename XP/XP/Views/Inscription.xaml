@@ -46,32 +46,24 @@
                 </Entry>
             </StackLayout>
             <StackLayout>
-                <Label Text="Age"
-                       >
-
-                </Label>
-                <Entry 
-                    x:Name="age"
-                    Placeholder="Age">
-
-                </Entry>
+               
             </StackLayout>
             <StackLayout>
-                <Label Text="Sex">
+                <Label Text="Sexe">
 
                 </Label>
                 <Entry 
                     x:Name="sex"
-                    Placeholder="Sex">
+                    Placeholder="Sexe">
 
                 </Entry>
 
                 <Label
-                    Text="BirthDate">
+                    Text="Date de naissance">
                     
                 </Label>
                 <DatePicker 
-                    x:Name="test">
+                    x:Name="birthdate">
                     
                 </DatePicker>
             </StackLayout>

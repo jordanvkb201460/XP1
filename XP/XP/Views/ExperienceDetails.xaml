@@ -13,28 +13,32 @@
                 <Label  x:Name="nom" TextColor="Black" FontSize="16" />
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label  Text="Compensation" TextColor="Black" FontSize="18" />
+                <Label  Text="Compensation : " TextColor="Black" FontSize="18" />
                 <Label  x:Name="compensation" TextColor="Black" FontSize="16"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" >
-                <Label  Text="Lieu" TextColor="Black" FontSize="18" WidthRequest="110"/>
+                <Label  Text="Lieu : " TextColor="Black" FontSize="18" WidthRequest="90"/>
                 <Label  x:Name="lieu" TextColor="Black" FontSize="16"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" >
-                <Label  Text="Age requirement" TextColor="Black" FontSize="18"/>
+                <Label  Text="Age requis : " TextColor="Black" FontSize="18"/>
                 <Label  x:Name="agereq" TextColor="Black" FontSize="16"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" >
-                <Label  Text="Sex requirement" TextColor="Black" FontSize="18"/>
+                <Label  Text="Sexe requis : " TextColor="Black" FontSize="18"/>
                 <Label  x:Name="SexReq" TextColor="Black" FontSize="16"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" >
-                <Label  Text="Specifiq requirement" TextColor="Black" FontSize="18" />
+                <Label  Text="Critères spécifiques : " TextColor="Black" FontSize="18" />
                 <Label  x:Name="SpeReq" TextColor="Black" FontSize="16"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" >
-                <Label  Text="Date" TextColor="Black" FontSize="18"/>
+                <Label  Text="Date début : " TextColor="Black" FontSize="18"/>
                 <Label  x:Name="date" TextColor="Black" FontSize="16"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Label  Text="Date fin : " TextColor="Black" FontSize="18"/>
+                <Label  x:Name="dateFin" TextColor="Black" FontSize="16"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Button
