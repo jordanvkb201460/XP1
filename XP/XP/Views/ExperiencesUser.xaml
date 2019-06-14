@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XP.Views.Experiences">
-
+             x:Class="XP.Views.ExperiencesUser">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Experiences"
@@ -16,22 +15,6 @@
                     WidthRequest="300"
                      x:Name="ExpStack">
             </StackLayout>
-            <Button
-                Clicked="Recherche"
-                Text="Recherche">
-                
-            </Button>
-            <Button
-                Clicked="ExperienceUser"
-                Text="Mes expériences">
-
-            </Button>
-            <Button
-                Clicked="Logout"
-                Text="Deconnexion">
-
-            </Button>
         </StackLayout>
-        
     </ContentPage.Content>
 </ContentPage>

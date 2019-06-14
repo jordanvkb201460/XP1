@@ -12,10 +12,12 @@ namespace XP.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Experiences : ContentPage
 	{
-		public Experiences (Dictionary<string,FilterHelper> dic=null)
+        List<Experience> list;
+
+        public Experiences (Dictionary<string,FilterHelper> dic=null)
 		{
 			InitializeComponent ();
-            List<Experience> list = new List<Experience>(RestService.Request<List<Experience>>());
+            list = new List<Experience>(RestService.Request<List<Experience>>());
             if(dic != null && dic.Count != 0)
             {
                list = Sort(list, dic);
@@ -81,6 +83,11 @@ namespace XP.Views
         public void Recherche(object sender, EventArgs e)
         {
             this.Navigation.PushAsync(new Recherche());
+        }
+
+        public void ExperienceUser(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new ExperiencesUser(list));
         }
 
         public void Logout(object sender, EventArgs e)
