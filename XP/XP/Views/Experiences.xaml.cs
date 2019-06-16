@@ -42,10 +42,13 @@ namespace XP.Views
                     };
                     tap.Tapped += (s, e) => Details(s, e, exp);
                     img.GestureRecognizers.Add(tap);
+                    lbl.GestureRecognizers.Add(tap);
                     StackLayout frame = new StackLayout()
                     {
                         HeightRequest = 100,
-                        Orientation = StackOrientation.Horizontal
+                        Orientation = StackOrientation.Horizontal,
+                        Margin = new Thickness(2, 2),
+                        BackgroundColor = Color.Gray,
                     };
                     frame.Children.Add(img);
                     frame.Children.Add(lbl);

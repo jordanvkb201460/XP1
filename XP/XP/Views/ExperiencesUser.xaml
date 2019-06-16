@@ -10,7 +10,6 @@
 
             </Label>
             <StackLayout 
-            BackgroundColor="Gray"
                      HorizontalOptions="CenterAndExpand"
                     WidthRequest="300"
                      x:Name="ExpStack">

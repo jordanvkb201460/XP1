@@ -36,6 +36,17 @@
                 </Entry>
             </StackLayout>
             <StackLayout>
+                <Label Text="Mot de passe">
+
+                </Label>
+                <Entry 
+                    x:Name="password2"
+                    Placeholder="Confirmer mot de passe"
+                       IsPassword="true">
+
+                </Entry>
+            </StackLayout>
+            <StackLayout>
                 <Label Text="Mail">
 
                 </Label>
@@ -52,11 +63,11 @@
                 <Label Text="Sexe">
 
                 </Label>
-                <Entry 
+                <Picker 
                     x:Name="sex"
-                    Placeholder="Sexe">
+                    >
 
-                </Entry>
+                </Picker>
 
                 <Label
                     Text="Date de naissance">
@@ -67,6 +78,7 @@
                     
                 </DatePicker>
             </StackLayout>
+            <Label x:Name="lblError" Text="" TextColor="Red" Margin="5, 5, 0, 0"/>
             <Button Text="Inscription"
                     Clicked="InscriptionCheckAsync">
                 

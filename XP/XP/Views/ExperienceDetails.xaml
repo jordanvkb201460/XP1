@@ -17,7 +17,7 @@
                 <Label  x:Name="compensation" TextColor="Black" FontSize="16"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" >
-                <Label  Text="Lieu : " TextColor="Black" FontSize="18" WidthRequest="90"/>
+                <Label  Text="Lieu : " TextColor="Black" FontSize="18"/>
                 <Label  x:Name="lieu" TextColor="Black" FontSize="16"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" >

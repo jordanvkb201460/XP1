@@ -18,12 +18,23 @@ namespace XP.Views
 		{
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, false);
-            compensation.Text = exp.Compensation.ToString();
+            compensation.Text = exp.Compensation.ToString() ?? "0" + "€";
+            nom.VerticalTextAlignment = TextAlignment.Center;
+            nom.HorizontalTextAlignment = TextAlignment.Start;
+            if (exp.Name.ToString().Length > 15)
+            {
+                nom.FontSize = 12;
+               
+            }
+            else if(exp.Name.ToString().Length > 60)
+            {
+                nom.FontSize = 9;
+            }
             nom.Text = exp.Name.ToString();
             lieu.Text = exp.Place.ToString();
-            agereq.Text = exp.AgeReq?.ToString();
-            SexReq.Text = exp.SexReq?.ToString();
-            SpeReq.Text = exp.SpecifiqReq?.ToString();
+            agereq.Text = exp.AgeReq?.ToString() ?? "Pas d'âge requis" ;
+            SexReq.Text = exp.SexReq?.ToString() ?? "Pas de sexe requis";
+            SpeReq.Text = exp.SpecifiqReq?.ToString() ?? "Pas de critères spécifiques";
             date.Text = exp.DateDebut.ToString();
             dateFin.Text = exp.DateFin.ToString();
             idExp = exp.id;
