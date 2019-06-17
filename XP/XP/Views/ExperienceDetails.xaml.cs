@@ -18,6 +18,7 @@ namespace XP.Views
 		{
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, false);
+            MainStack.BackgroundColor = Color.FromHex("#7cc8ff");
             compensation.Text = exp.Compensation.ToString() ?? "0" + "€";
             nom.VerticalTextAlignment = TextAlignment.Center;
             nom.HorizontalTextAlignment = TextAlignment.Start;

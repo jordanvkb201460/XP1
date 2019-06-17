@@ -3,8 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XP.Views.Recherche">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Name">
+        <StackLayout
+            BackgroundColor="#edd8c9">
+            <Label Text="Nom">
             </Label>
             <Entry
                 x:Name="Name">
@@ -15,12 +16,6 @@
                 x:Name="Compensation"
                 Keyboard="Numeric">
             </Entry>
-            
-            <!--Label Text="Date Debut">
-            </>
-            <DatePicker
-                x:Name="Date">
-            </-->
             <Button Clicked="RechercheButton" Text="Recherche">
               
             </Button>

@@ -36,10 +36,6 @@ namespace XP.Views
                 });
 
             }
-           /* if (Date.Date != null)
-            {
-                dic.Add("DateDebut", Date.Date.ToShortDateString());
-            }*/
 
             this.Navigation.PushAsync(new Experiences(dic));
         }

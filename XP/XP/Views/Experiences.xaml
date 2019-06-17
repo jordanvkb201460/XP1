@@ -4,7 +4,8 @@
              x:Class="XP.Views.Experiences">
 
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout
+            BackgroundColor="#edd8c9">
             <Label Text="Experiences"
                    HorizontalOptions="CenterAndExpand"
                    FontSize="Large">

@@ -3,86 +3,88 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XP.Views.Inscription">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical">
-            <StackLayout>
-                <Label Text="Nom">
+        <ScrollView>
+            <StackLayout Orientation="Vertical">
+                <StackLayout>
+                    <Label Text="Nom">
                     
-                </Label>
-                <Entry
-                    x:Name ="lastname"
-                    Placeholder="Nom">
+                    </Label>
+                    <Entry
+                        x:Name ="lastname"
+                        Placeholder="Nom">
                     
-                </Entry>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Prenom">
+                    </Entry>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Prenom">
 
-                </Label>
-                <Entry
-                    x:Name="firstname"
-                    Placeholder="Prenom">
+                    </Label>
+                    <Entry
+                        x:Name="firstname"
+                        Placeholder="Prenom">
 
-                </Entry>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Mot de passe">
+                    </Entry>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Mot de passe">
 
-                </Label>
-                <Entry 
-                    x:Name="password"
-                    Placeholder="Mot de passe"
-                       IsPassword="true">
+                    </Label>
+                    <Entry 
+                        x:Name="password"
+                        Placeholder="Mot de passe"
+                           IsPassword="true">
 
-                </Entry>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Mot de passe">
+                    </Entry>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Mot de passe">
 
-                </Label>
-                <Entry 
-                    x:Name="password2"
-                    Placeholder="Confirmer mot de passe"
-                       IsPassword="true">
+                    </Label>
+                    <Entry 
+                        x:Name="password2"
+                        Placeholder="Confirmer mot de passe"
+                           IsPassword="true">
 
-                </Entry>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Mail">
+                    </Entry>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Mail">
 
-                </Label>
-                <Entry 
-                    x:Name="mail"
-                    Placeholder="Mail">
+                    </Label>
+                    <Entry 
+                        x:Name="mail"
+                        Placeholder="Mail">
 
-                </Entry>
-            </StackLayout>
-            <StackLayout>
+                    </Entry>
+                </StackLayout>
+                <StackLayout>
                
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Sexe">
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Sexe">
 
-                </Label>
-                <Picker 
-                    x:Name="sex"
-                    >
+                    </Label>
+                    <Picker 
+                        x:Name="sex"
+                        >
 
-                </Picker>
+                    </Picker>
 
-                <Label
-                    Text="Date de naissance">
+                    <Label
+                        Text="Date de naissance">
                     
-                </Label>
-                <DatePicker 
-                    x:Name="birthdate">
+                    </Label>
+                    <DatePicker 
+                        x:Name="birthdate">
                     
-                </DatePicker>
-            </StackLayout>
-            <Label x:Name="lblError" Text="" TextColor="Red" Margin="5, 5, 0, 0"/>
-            <Button Text="Inscription"
-                    Clicked="InscriptionCheckAsync">
+                    </DatePicker>
+                </StackLayout>
+                <Label x:Name="lblError" Text="" TextColor="Red" Margin="5, 5, 0, 0"/>
+                <Button Text="Inscription"
+                        Clicked="InscriptionCheckAsync">
                 
-            </Button>
-        </StackLayout>
+                </Button>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

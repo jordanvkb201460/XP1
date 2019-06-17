@@ -58,7 +58,7 @@ namespace XP.Views
                         HeightRequest = 100,
                         Orientation = StackOrientation.Horizontal,
                         Margin = new Thickness(2, 2),
-                        BackgroundColor = Color.Gray,
+                        BackgroundColor = Color.FromHex("#7cc8ff"),
                     };
                     frame.Children.Add(img);
                     frame.Children.Add(lbl);
