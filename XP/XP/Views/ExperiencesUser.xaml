@@ -3,18 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XP.Views.ExperiencesUser">
     <ContentPage.Content>
-        <StackLayout
-            BackgroundColor="#edd8c9">
-            <Label Text="Experiences"
-                   HorizontalOptions="CenterAndExpand"
-                   FontSize="Large">
+        <ScrollView>
+            <StackLayout
+                BackgroundColor="#edd8c9">
+                <Label Text="Experiences"
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="Large">
 
-            </Label>
-            <StackLayout 
-                     HorizontalOptions="CenterAndExpand"
-                    WidthRequest="300"
-                     x:Name="ExpStack">
+                </Label>
+                <StackLayout 
+                         HorizontalOptions="CenterAndExpand"
+                        WidthRequest="300"
+                         x:Name="ExpStack">
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

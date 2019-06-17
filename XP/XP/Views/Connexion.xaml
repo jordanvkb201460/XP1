@@ -33,7 +33,7 @@
                     </StackLayout>
 
                     <StackLayout x:Name="EntryAndLabError">
-                        <Entry x:Name="pseudoUser" Placeholder="Pseudo/email" PlaceholderColor="Gray"
+                        <Entry x:Name="pseudoUser" Placeholder="Mail" PlaceholderColor="Gray"
                                TextColor="Black"/>
                         <Entry x:Name="pswdUser" Placeholder="Mot de passe" PlaceholderColor="Gray"
                                TextColor="Black"

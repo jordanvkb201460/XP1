@@ -35,7 +35,7 @@ namespace XP.Views
             lieu.Text = exp.Place.ToString();
             agereq.Text = exp.AgeReq?.ToString() ?? "Pas d'âge requis" ;
             SexReq.Text = exp.SexReq?.ToString() ?? "Pas de sexe requis";
-            SpeReq.Text = exp.SpecifiqReq?.ToString() ?? "Pas de critères spécifiques";
+            SpeReq.Text = exp.SpecifiqReq?.ToString() ?? "Pas de critère spécifique";
             date.Text = exp.DateDebut.ToString();
             dateFin.Text = exp.DateFin.ToString();
             idExp = exp.id;
@@ -54,7 +54,7 @@ namespace XP.Views
                             feedback.Text = "Attention, vous ne remplissez pas les critères requis pour cette expérience";
                             break;
                         case 0: uselessBouton.Text = "Inscription en attente"; break;
-                        default: uselessBouton.Text = "Experience terminée";
+                        default: uselessBouton.Text = "Expérience terminée";
                             feedback.Text = exp.Feedback;
                             break;
                     }

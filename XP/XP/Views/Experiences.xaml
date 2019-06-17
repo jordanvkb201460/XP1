@@ -4,34 +4,35 @@
              x:Class="XP.Views.Experiences">
 
     <ContentPage.Content>
-        <StackLayout
-            BackgroundColor="#edd8c9">
-            <Label Text="Experiences"
-                   HorizontalOptions="CenterAndExpand"
-                   FontSize="Large">
+        <ScrollView>
+            <StackLayout
+                BackgroundColor="#edd8c9">
+                <Label Text="Experiences"
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="Large">
 
-            </Label>
-            <StackLayout 
-                     HorizontalOptions="CenterAndExpand"
-                    WidthRequest="300"
-                     x:Name="ExpStack">
-            </StackLayout>
-            <Button
-                Clicked="Recherche"
-                Text="Recherche">
+                </Label>
+                <StackLayout 
+                         HorizontalOptions="CenterAndExpand"
+                        WidthRequest="300"
+                         x:Name="ExpStack">
+                </StackLayout>
+                <Button
+                    Clicked="Recherche"
+                    Text="Recherche">
                 
-            </Button>
-            <Button
-                Clicked="ExperienceUser"
-                Text="Mes expériences">
+                </Button>
+                <Button
+                    Clicked="ExperienceUser"
+                    Text="Mes expériences">
 
-            </Button>
-            <Button
-                Clicked="Logout"
-                Text="Deconnexion">
+                </Button>
+                <Button
+                    Clicked="Logout"
+                    Text="Deconnexion">
 
-            </Button>
-        </StackLayout>
-        
+                </Button>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

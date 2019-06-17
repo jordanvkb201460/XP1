@@ -31,7 +31,7 @@ namespace XP.Views
             var json = RestService.PostRequest<Participant>(connexion, "loginjson");
             if(json == null)
             {
-                lblError.Text = "Mauvais mdp";
+                lblError.Text = "Adresse mail ou mot de passe incorrect";
             }
             else
             {
